@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane prefWidth="1250" prefHeight="900"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            style="-fx-background-color: #F8FAFC;"> <left>
+        <VBox prefWidth="260" spacing="0"
+              style="-fx-background-color: #FFFFFF; -fx-border-color: transparent #E2E8F0 transparent transparent; -fx-border-width: 1;">
+            
+            <padding>
+                <Insets top="40" right="20" bottom="30" left="20"/>
+            </padding>
+
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <padding><Insets bottom="45"/></padding>
+                <StackPane>
+                    <Circle radius="18" fill="#2563EB"/>
+                    <Label text="F" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16;"/>
+                </StackPane>
+                <Label text="FinanceSys" style="-fx-text-fill: #0F172A; -fx-font-size: 22px; -fx-font-weight: 800;"/>
+            </HBox>
+
+            <VBox spacing="10">
+                <Button text="Dashboard" maxWidth="Infinity" alignment="BASELINE_LEFT"
+                        style="-fx-background-color: #F1F5F9; -fx-text-fill: #2563EB; -fx-background-radius: 10; -fx-font-weight: bold; -fx-padding: 12 15;" />
+                <Button text="Payments" maxWidth="Infinity" alignment="BASELINE_LEFT"
+                        style="-fx-background-color: transparent; -fx-text-fill: #64748B; -fx-font-weight: 500; -fx-padding: 12 15;" />
+                <Button text="Invoices" maxWidth="Infinity" alignment="BASELINE_LEFT"
+                        style="-fx-background-color: transparent; -fx-text-fill: #64748B; -fx-font-weight: 500; -fx-padding: 12 15;" />
+                <Button text="Settings" maxWidth="Infinity" alignment="BASELINE_LEFT"
+                        style="-fx-background-color: transparent; -fx-text-fill: #64748B; -fx-font-weight: 500; -fx-padding: 12 15;" />
+            </VBox>
+
+            <Region VBox.vgrow="ALWAYS"/>
+            
+            <Button text="Logout" maxWidth="Infinity"
+                    style="-fx-background-color: #FFF1F2; -fx-text-fill: #E11D48; -fx-background-radius: 10; -fx-font-weight: bold; -fx-padding: 10;"/>
+        </VBox>
+    </left>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;">
+            <VBox spacing="30" style="-fx-padding: 40;">
+
+                <VBox spacing="20" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 16; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 20, 0, 0, 10);">
+                    
+                    <HBox alignment="CENTER_LEFT">
+                        <VBox spacing="5">
+                            <Label text="Payment Calendar" style="-fx-font-size: 26px; -fx-font-weight: 800; -fx-text-fill: #0F172A;" />
+                            <Label text="Manage and track monthly subscription statuses" style="-fx-text-fill: #64748B; -fx-font-size: 14px;" />
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <HBox spacing="15" alignment="CENTER_RIGHT" style="-fx-background-color: #F8FAFC; -fx-padding: 10 20; -fx-background-radius: 30;">
+                            <HBox spacing="5" alignment="CENTER"><Circle radius="4" fill="#22C55E"/><Label text="Paid" style="-fx-font-size: 12; -fx-text-fill: #475569;"/></HBox>
+                            <HBox spacing="5" alignment="CENTER"><Circle radius="4" fill="#EF4444"/><Label text="Late" style="-fx-font-size: 12; -fx-text-fill: #475569;"/></HBox>
+                            <HBox spacing="5" alignment="CENTER"><Circle radius="4" fill="#CBD5E1"/><Label text="Future" style="-fx-font-size: 12; -fx-text-fill: #475569;"/></HBox>
+                        </HBox>
+                    </HBox>
+
+                    <Separator/>
+
+                    <HBox spacing="20" alignment="BOTTOM_LEFT">
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label text="Department" style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12;"/>
+                            <ComboBox promptText="All Departments" prefHeight="40" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                        </VBox>
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label text="Group" style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12;"/>
+                            <ComboBox promptText="Select Group" prefHeight="40" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                        </VBox>
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label text="Year" style="-fx-font-weight: bold; -fx-text-fill: #475569; -fx-font-size: 12;"/>
+                            <ComboBox promptText="2026" prefHeight="40" maxWidth="Infinity" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 8; -fx-background-radius: 8;"/>
+                        </VBox>
+                        <Button text="Filter Results" prefHeight="40" prefWidth="120" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;"/>
+                    </HBox>
+                </VBox>
+
+                <GridPane hgap="20" vgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+                    </columnConstraints>
+
+                    <Button text="January" GridPane.rowIndex="0" GridPane.columnIndex="0" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #22C55E; -fx-border-width: 2; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #1E293B;"/>
+                    
+                    <Button text="February" GridPane.rowIndex="0" GridPane.columnIndex="1" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #22C55E; -fx-border-width: 2; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #1E293B;"/>
+                    
+                    <Button text="March" GridPane.rowIndex="0" GridPane.columnIndex="2" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #EF4444; -fx-border-width: 2; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #1E293B;"/>
+                    
+                    <Button text="April" GridPane.rowIndex="0" GridPane.columnIndex="3" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+
+                    <Button text="May" GridPane.rowIndex="1" GridPane.columnIndex="0" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+                    
+                    <Button text="June" GridPane.rowIndex="1" GridPane.columnIndex="1" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+                    
+                    <Button text="July" GridPane.rowIndex="1" GridPane.columnIndex="2" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+                    
+                    <Button text="August" GridPane.rowIndex="1" GridPane.columnIndex="3" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+
+                    <Button text="September" GridPane.rowIndex="2" GridPane.columnIndex="0" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+                    
+                    <Button text="October" GridPane.rowIndex="2" GridPane.columnIndex="1" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+                    
+                    <Button text="November" GridPane.rowIndex="2" GridPane.columnIndex="2" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+                    
+                    <Button text="December" GridPane.rowIndex="2" GridPane.columnIndex="3" maxWidth="Infinity" prefHeight="120"
+                            style="-fx-background-color: white; -fx-border-color: #E2E8F0; -fx-border-width: 1; -fx-border-radius: 12; -fx-background-radius: 12; -fx-font-size: 16; -fx-text-fill: #94A3B8;"/>
+                </GridPane>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
